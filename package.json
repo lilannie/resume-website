@@ -1,0 +1,53 @@
+{
+  "name": "ResumeWebsite",
+  "version": "1.0.0",
+  "description": "Annie Steenson's Resume Website",
+  "author": "Annie Steenson",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "build:hot": "webpack -w",
+    "start": "node ./server/server.js",
+    "server:dev": "webpack-dev-server --hot --inline",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lilannie/resume-website"
+  },
+  "jest": {
+    "setupTestFrameworkScriptFile": "./test/index.js",
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "**/*.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "./coverage/",
+      "./public/",
+      "./test/index.js"
+    ],
+    "coverageReporters": [
+      "lcov",
+      "text"
+    ]
+  },
+  "dependencies": {
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "react-hot-loader": "^1.3.1",
+    "webpack": "^3.1.0",
+    "webpack-dev-middleware": "^1.11.0",
+    "webpack-dev-server": "^2.5.1",
+    "webpack-hot-middleware": "^2.18.2"
+  }
+}
